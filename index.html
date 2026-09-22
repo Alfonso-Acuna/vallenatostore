@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="VallenatoStore: tienda virtual de álbumes, vinilos y CDs de música vallenata.">
+    <meta name="description" content="VallenatoStore: tienda virtual de álbumes, vinilos y CDs de música vallenata. Escucha en YouTube, Spotify y Apple Music.">
     <title>VallenatoStore | Álbumes, Vinilos y CDs de Vallenato</title>
 
     <!-- Bootstrap 5.3 CSS -->
@@ -13,18 +13,18 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- Estilos personalizados -->
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- ======= ENCABEZADO / HEADER ======= -->
+    <!-- ================= ENCABEZADO / HEADER ================= -->
     <header class="header-vallenato sticky-top shadow">
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark py-2">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <i class="bi bi-disc-fill me-2 rotar"></i>
+                <a class="navbar-brand d-flex align-items-center" href="#inicio">
+                    <i class="bi bi-disc-fill me-2 rotar brand-icon"></i>
                     <span class="brand-logo">VallenatoStore</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
@@ -32,69 +32,251 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="menuPrincipal">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#inicio">Inicio</a></li>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#artistas">Artistas</a></li>
                         <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#pedido">Hacer pedido</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#escuchar">Escuchar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pedido">Pedido</a></li>
+                        <li class="nav-item">
+                            <a class="btn btn-hero btn-sm ms-lg-3 px-3 mt-2 mt-lg-0" href="#boletin">
+                                <i class="bi bi-headphones me-1"></i>Boletín
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- ======= HERO ======= -->
+    <!-- ================= HERO ================= -->
     <section id="inicio" class="hero d-flex align-items-center text-center text-white">
         <div class="container">
-            <h1 class="display-3 fw-bold">La música que vibra con el acordeón</h1>
-            <p class="lead">Álbumes, vinilos y CDs de los artistas y agrupaciones más grandes del vallenato.</p>
-            <a href="#pedido" class="btn btn-hero btn-lg">Hacer mi pedido</a>
+            <p class="hero-badge d-inline-block mb-3"><i class="bi bi-stars me-2"></i>Especialistas en música vallenata desde 2011</p>
+            <h1 class="display-3 fw-bold mb-3">La música que vibra con el acordeón</h1>
+            <p class="lead mx-auto hero-sub mb-4">Vinilos, CDs y descargas digitales de los artistas y agrupaciones más grandes del vallenato: Diomedes Díaz, Jorge Celedón, Binomio de Oro y muchos más.</p>
+
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                <span class="hero-chip"><i class="bi bi-check2-circle me-1"></i>Envio a todo Colombia</span>
+                <span class="hero-chip"><i class="bi bi-shield-check me-1"></i>Producidos y sellados originales</span>
+                <span class="hero-chip"><i class="bi bi-vinyl me-1"></i>Vinilos 180g</span>
+            </div>
+
+            <div class="row justify-content-center hero-stats gy-3 mt-2">
+                <div class="col-6 col-md-3">
+                    <div class="stat-box"><p class="stat-num">+25.000</p><p class="stat-label">Álbumes vendidos</p></div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-box"><p class="stat-num">120+</p><p class="stat-label">Artistas y agrupaciones</p></div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-box"><p class="stat-num">4.9/5</p><p class="stat-label">Valoración de clientes</p></div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-box"><p class="stat-num">15</p><p class="stat-label">Años de trayectoria</p></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- ======= CATÁLOGO ======= -->
+    <!-- ================= HISTORIA ================= -->
+    <section id="historia" class="py-5">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-12 col-lg-6">
+                    <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow historia-img">
+                        <img class="img-fluid w-100 h-100 object-fit-cover"
+                            src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=900&q=80"
+                            alt="Concierto de música vallenata con luces y público">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h2 class="titulo-seccion mb-3">¿Qué es el vallenato?</h2>
+                    <p class="lead">El vallenato nació en la costa Caribe colombiana y es patrimonio inmaterial de la humanidad desde 2015, declarado por la UNESCO.</p>
+                    <p>Se interpreta tradicionalmente con acordeón, caja y guacharaca, aunque su sonido ha evolucionado con la guitarra, el bajo y la batería. Sus cuatro aires —paseo, merengue, son y puya— cuentan historias de amor, despecho, paisajes y cotidianidad.</p>
+                    <p>En <strong>VallenatoStore</strong> celebramos ese legado: trabajamos con casas disqueras colombianas (Sony Music, Codiscos y otras) para conseguir ediciones originales de los clásicos que marcaron generaciones.</p>
+                    <div class="d-flex flex-wrap gap-3 mt-3">
+                        <div class="aire-chip"><span class="aire-ico"><i class="bi bi-music-note"></i></span><strong>Paseo</strong><span>ritmo lento y romántico</span></div>
+                        <div class="aire-chip"><span class="aire-ico"><i class="bi bi-bullseye"></i></span><strong>Merengue</strong><span>alegre y rápido</span></div>
+                        <div class="aire-chip"><span class="aire-ico"><i class="bi bi-soundwave"></i></span><strong>Son</strong><span>lírico y nostálgico</span></div>
+                        <div class="aire-chip"><span class="aire-ico"><i class="bi bi-lightning"></i></span><strong>Puya</strong><span>el más veloz</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ARTISTAS DESTACADOS ================= -->
+    <section id="artistas" class="py-5 bg-seccion">
+        <div class="container">
+            <h2 class="titulo-seccion text-center mb-4">Artistas y agrupaciones destacados</h2>
+            <p class="text-center text-muted mx-auto mb-4" style="max-width: 620px;">Figuras que hicieron del vallenato un género universal. Búscalos en nuestro catálogo o escúchalos directamente en las plataformas.</p>
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-2-4">
+                    <div class="artista-card text-center">
+                        <img class="artista-foto"
+                            src="https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a4/93/49/a493492d-540c-5afa-c4c4-41842cfc05b9/886446879833.jpg/300x300bb.jpg"
+                            alt="Diomedes Díaz - El Cacique de la Junta">
+                        <h3 class="artista-nombre">Diomedes Díaz</h3>
+                        <p class="text-muted small mb-2">El Cacique de la Junta</p>
+                        <a href="https://open.spotify.com/search/Diomedes%20D%C3%ADaz" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-spotify"></i></a>
+                        <a href="https://music.apple.com/us/artist/diomedes-d%C3%ADaz/73026993?uo=2" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-apple"></i></a>
+                        <a href="https://www.youtube.com/@DiomedesDiazOficial" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2-4">
+                    <div class="artista-card text-center">
+                        <img class="artista-foto"
+                            src="https://is1-ssl.mzstatic.com/image/thumb/Music/v4/71/45/4b/71454b33-c741-881a-7cfa-5478bef59daf/886444178754.jpg/300x300bb.jpg"
+                            alt="Jorge Celedón - Jorgito Celedón">
+                        <h3 class="artista-nombre">Jorge Celedón</h3>
+                        <p class="text-muted small mb-2">Ganador de 3 Grammy Latinos</p>
+                        <a href="https://open.spotify.com/search/Jorge%20Celed%C3%B3n" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-spotify"></i></a>
+                        <a href="https://music.apple.com/us/artist/jorge-celed%C3%B3n/159964468?uo=2" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-apple"></i></a>
+                        <a href="https://www.youtube.com/@JorgeCeledonVideo" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2-4">
+                    <div class="artista-card text-center">
+                        <img class="artista-foto"
+                            src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/43/1f/fd/431ffd34-9299-3570-23a7-d486b023c81a/829410648561.png/300x300bb.jpg"
+                            alt="Binomio de Oro de América">
+                        <h3 class="artista-nombre">Binomio de Oro</h3>
+                        <p class="text-muted small mb-2">La agrupación más taquillera</p>
+                        <a href="https://open.spotify.com/search/Binomio%20de%20Oro" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-spotify"></i></a>
+                        <a href="https://music.apple.com/us/artist/binomio-de-oro-de-am%C3%A9rica/199869221?uo=2" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-apple"></i></a>
+                        <a href="https://www.youtube.com/results?search_query=binomio+de+oro" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2-4">
+                    <div class="artista-card text-center">
+                        <img class="artista-foto"
+                            src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ef/d6/7f/efd67f5d-1290-c91b-104a-b842fca52830/886447185650.jpg/300x300bb.jpg"
+                            alt="Silvestre Dangond - El Motor de la Parranda">
+                        <h3 class="artista-nombre">Silvestre Dangond</h3>
+                        <p class="text-muted small mb-2">El motor de la parranda</p>
+                        <a href="https://open.spotify.com/search/Silvestre%20Dangond" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-spotify"></i></a>
+                        <a href="https://music.apple.com/us/artist/silvestre-dangond/311205761?uo=2" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-apple"></i></a>
+                        <a href="https://www.youtube.com/results?search_query=silvestre+dangond" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2-4">
+                    <div class="artista-card text-center">
+                        <img class="artista-foto"
+                            src="https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/28/08/1c/28081c6d-cb9b-c1b7-d4a2-63aaf484c412/00724383207657.jpg/300x300bb.jpg"
+                            alt="Aniceto Molina - El Tigre Sabanero">
+                        <h3 class="artista-nombre">Aniceto Molina</h3>
+                        <p class="text-muted small mb-2">El tigre sabanero</p>
+                        <a href="https://open.spotify.com/search/Aniceto%20Molina" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-spotify"></i></a>
+                        <a href="https://music.apple.com/us/artist/aniceto-molina/26116457?uo=2" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-apple"></i></a>
+                        <a href="https://www.youtube.com/results?search_query=aniceto+molina" target="_blank" rel="noopener" class="plataforma-chip"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CATÁLOGO ================= -->
     <main>
         <section id="catalogo" class="py-5">
             <div class="container">
-                <h2 class="titulo-seccion text-center mb-4">Nuestro catálogo</h2>
+                <h2 class="titulo-seccion text-center mb-4">Nuestro catálogo destacado</h2>
+                <p class="text-center text-muted mx-auto mb-4" style="max-width: 620px;">Ediciones originales y en excelente estado. Elige el formato que más te guste y pídelo en el formulario.</p>
                 <div class="row g-4">
-                    <div class="col-12 col-md-6 col-lg-3">
+                    <div class="col-12 col-sm-6 col-lg-3">
                         <div class="card producto h-100">
-                            <div class="pt-4 text-center card-cover"><i class="bi bi-vinyl-fill"></i></div>
-                            <div class="card-body">
-                                <h5 class="card-title">La Provincia</h5>
-                                <p class="card-text">Vinilo del clásico inolvidable de Diomedes Díaz.</p>
-                                <p class="precio">$85.000</p>
+                            <img class="card-img-top producto-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/43/1f/fd/431ffd34-9299-3570-23a7-d486b023c81a/829410648561.png/600x600bb.jpg" alt="Portada del álbum 30 Mejores - Binomio de Oro de América">
+                            <span class="producto-format">CD</span>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">30 Mejores</h5>
+                                <p class="card-artista">Binomio de Oro de América</p>
+                                <p class="card-text flex-grow-1">30 éxitos que marcaron la historia del Binomio, con Jean Carlos Centeno y Jorgito Celedón.</p>
+                                <p class="precio">$55.000</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3">
+                    <div class="col-12 col-sm-6 col-lg-3">
                         <div class="card producto h-100">
-                            <div class="pt-4 text-center card-cover"><i class="bi bi-cd-fill"></i></div>
-                            <div class="card-body">
-                                <h5 class="card-title">Los Mejores Éxitos</h5>
-                                <p class="card-text">CD recopilatorio del Binomio de Oro de América.</p>
-                                <p class="precio">$45.000</p>
+                            <img class="card-img-top producto-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a4/93/49/a493492d-540c-5afa-c4c4-41842cfc05b9/886446879833.jpg/600x600bb.jpg" alt="Portada del álbum 30 Grandes Éxitos - Diomedes Díaz">
+                            <span class="producto-format">CD</span>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">30 Grandes Éxitos</h5>
+                                <p class="card-artista">Diomedes Díaz</p>
+                                <p class="card-text flex-grow-1">El cacique en sus mejores interpretaciones junto a Colacho, Juancho Rois e Iván Zuleta.</p>
+                                <p class="precio">$48.000</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3">
+                    <div class="col-12 col-sm-6 col-lg-3">
                         <div class="card producto h-100">
-                            <div class="pt-4 text-center card-cover"><i class="bi bi-vinyl-fill"></i></div>
-                            <div class="card-body">
-                                <h5 class="card-title">Cualquier Día</h5>
-                                <p class="card-text">Vinilo de Jorge Celedón y Sergio Luis Rodríguez.</p>
+                            <img class="card-img-top producto-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music/cf/2d/96/mzi.sxlvpruv.jpg/600x600bb.jpg" alt="Portada del álbum Experiencias Vividas - Diomedes Díaz">
+                            <span class="producto-format rojo">VINILO 180g</span>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Experiencias Vividas</h5>
+                                <p class="card-artista">Diomedes Díaz</p>
+                                <p class="card-text flex-grow-1">Un paseo inolvidable producido por Juancho Rois. Toca de principio a fin sin saltarte una.</p>
+                                <p class="precio">$92.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card producto h-100">
+                            <img class="card-img-top producto-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/86/7f/d3/867fd3f0-5709-afd4-f165-861a331b567f/mzi.ptidugdm.jpg/600x600bb.jpg" alt="Portada del álbum Un Canto Celestial - Diomedes Díaz e Iván Zuleta">
+                            <span class="producto-format">CD</span>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Un Canto Celestial</h5>
+                                <p class="card-artista">Diomedes Díaz & Iván Zuleta</p>
+                                <p class="card-text flex-grow-1">La última gran obra de Diomedes en los 90, con temas que se volvieron himnos.</p>
+                                <p class="precio">$46.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card producto h-100">
+                            <img class="card-img-top producto-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music/5d/cd/4e/mzi.heifqyox.jpg/600x600bb.jpg" alt="Portada del álbum Título de Amor - Diomedes Díaz y Juancho Rois">
+                            <span class="producto-format rojo">VINILO 180g</span>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Título de Amor</h5>
+                                <p class="card-artista">Diomedes Díaz & Juancho Rois</p>
+                                <p class="card-text flex-grow-1">Incluye «La Plata» y otras joyas del repertorio del cacique.</p>
                                 <p class="precio">$95.000</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3">
+                    <div class="col-12 col-sm-6 col-lg-3">
                         <div class="card producto h-100">
-                            <div class="pt-4 text-center card-cover"><i class="bi bi-disc-fill"></i></div>
-                            <div class="card-body">
-                                <h5 class="card-title">Historia Musical</h5>
-                                <p class="card-text">CD de los Hermanos Zuleta por la vieja Valledupar.</p>
+                            <img class="card-img-top producto-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music/v4/71/45/4b/71454b33-c741-881a-7cfa-5478bef59daf/886444178754.jpg/600x600bb.jpg" alt="Portada del álbum Celedón Sin Fronteras - Jorge Celedón">
+                            <span class="producto-format">CD</span>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Celedón Sin Fronteras</h5>
+                                <p class="card-artista">Jorge Celedón</p>
+                                <p class="card-text flex-grow-1">Ganador del Grammy Latino. El vallenato romántico en su máximo esplendor.</p>
                                 <p class="precio">$50.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card producto h-100">
+                            <img class="card-img-top producto-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music/61/8a/93/mzi.lxwtgmyr.jpg/600x600bb.jpg" alt="Portada del álbum Llévame en Tus Sueños - Jorge Celedón y Jimmy Zambrano">
+                            <span class="producto-format">CD</span>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Llévame en Tus Sueños</h5>
+                                <p class="card-artista">Jorge Celedón & Jimmy Zambrano</p>
+                                <p class="card-text flex-grow-1">El oriundo de Villanueva con el acordeón de Jimmy Zambrano. Puro sentimiento.</p>
+                                <p class="precio">$47.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card producto h-100">
+                            <img class="card-img-top producto-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music/08/4c/2f/mzi.viewyqhe.jpg/600x600bb.jpg" alt="Portada del álbum Los 30 Vallenatos de la Historia">
+                            <span class="producto-format rojo">VINILO 180g</span>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Los 30 Vallenatos de la Historia</h5>
+                                <p class="card-artista">Varios artistas</p>
+                                <p class="card-text flex-grow-1">Una antología imprescindible para coleccionistas, compilada por Sony Music.</p>
+                                <p class="precio">$110.000</p>
                             </div>
                         </div>
                     </div>
@@ -102,16 +284,230 @@
             </div>
         </section>
 
-        <!-- ======= FORMULARIO DE PEDIDO ======= -->
-        <section id="pedido" class="py-5">
+        <!-- ================= ESCUCHAR EN PLATAFORMAS ================= -->
+        <section id="escuchar" class="py-5 bg-seccion">
             <div class="container">
-                <h2 class="titulo-seccion text-center mb-4">Formulario de pedido</h2>
+                <h2 class="titulo-seccion text-center mb-3">Escúchalos antes de comprar</h2>
+                <p class="text-center text-muted mx-auto mb-4" style="max-width: 620px;">Cada álbum tiene su versión para escuchar en <strong>YouTube</strong>, <strong>Spotify</strong> y <strong>Apple Music</strong>. Dale play, enamórate y luego lo pides.</p>
+                <div class="row g-4 justify-content-center">
+
+                    <!-- Canción 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card escucha-card h-100">
+                            <a href="https://www.youtube.com/watch?v=qbQEj8fsaKU" target="_blank" rel="noopener" class="escucha-thumb">
+                                <img src="https://img.youtube.com/vi/qbQEj8fsaKU/mqdefault.jpg" alt="Miniatura del video Oye Bonita en YouTube">
+                                <span class="play-btn"><i class="bi bi-play-fill"></i></span>
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Oye Bonita</h5>
+                                <p class="card-artista">Diomedes Díaz</p>
+                                <div class="escucha-links">
+                                    <a class="pl-detail" href="https://www.youtube.com/watch?v=qbQEj8fsaKU" target="_blank" rel="noopener"><i class="bi bi-youtube"></i> YouTube</a>
+                                    <a class="pl-detail" href="https://open.spotify.com/search/Oye%20Bonita%20Diomedes" target="_blank" rel="noopener"><i class="bi bi-spotify"></i> Spotify</a>
+                                    <a class="pl-detail" href="https://music.apple.com/us/album/diomedes-30-grandes-%C3%A9xitos/1315811912?uo=2" target="_blank" rel="noopener"><i class="bi bi-apple"></i> Apple Music</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canción 2 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card escucha-card h-100">
+                            <a href="https://www.youtube.com/watch?v=4HW6hDGro1g" target="_blank" rel="noopener" class="escucha-thumb">
+                                <img src="https://img.youtube.com/vi/4HW6hDGro1g/mqdefault.jpg" alt="Miniatura del video Cuatro Rosas en YouTube">
+                                <span class="play-btn"><i class="bi bi-play-fill"></i></span>
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cuatro Rosas</h5>
+                                <p class="card-artista">Jorge Celedón</p>
+                                <div class="escucha-links">
+                                    <a class="pl-detail" href="https://www.youtube.com/watch?v=4HW6hDGro1g" target="_blank" rel="noopener"><i class="bi bi-youtube"></i> YouTube</a>
+                                    <a class="pl-detail" href="https://open.spotify.com/search/Cuatro%20Rosas%20Celed%C3%B3n" target="_blank" rel="noopener"><i class="bi bi-spotify"></i> Spotify</a>
+                                    <a class="pl-detail" href="https://music.apple.com/us/album/de-lo-nuevo-lo-mejor/280940475?uo=2" target="_blank" rel="noopener"><i class="bi bi-apple"></i> Apple Music</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canción 3 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card escucha-card h-100">
+                            <a href="https://www.youtube.com/watch?v=dJDGQlYiFvA" target="_blank" rel="noopener" class="escucha-thumb">
+                                <img src="https://img.youtube.com/vi/dJDGQlYiFvA/mqdefault.jpg" alt="Miniatura del video Mi Biografía en YouTube">
+                                <span class="play-btn"><i class="bi bi-play-fill"></i></span>
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Mi Biografía</h5>
+                                <p class="card-artista">Diomedes Díaz</p>
+                                <div class="escucha-links">
+                                    <a class="pl-detail" href="https://www.youtube.com/watch?v=dJDGQlYiFvA" target="_blank" rel="noopener"><i class="bi bi-youtube"></i> YouTube</a>
+                                    <a class="pl-detail" href="https://open.spotify.com/search/Mi%20Biograf%C3%ADa%20Diomedes" target="_blank" rel="noopener"><i class="bi bi-spotify"></i> Spotify</a>
+                                    <a class="pl-detail" href="https://music.apple.com/us/artist/diomedes-d%C3%ADaz/73026993?uo=2" target="_blank" rel="noopener"><i class="bi bi-apple"></i> Apple Music</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canción 4 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card escucha-card h-100">
+                            <a href="https://www.youtube.com/watch?v=i2qOS0It1q8" target="_blank" rel="noopener" class="escucha-thumb">
+                                <img src="https://img.youtube.com/vi/i2qOS0It1q8/mqdefault.jpg" alt="Miniatura del video La Indiferencia en YouTube">
+                                <span class="play-btn"><i class="bi bi-play-fill"></i></span>
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">La Indiferencia</h5>
+                                <p class="card-artista">Silvestre Dangond</p>
+                                <div class="escucha-links">
+                                    <a class="pl-detail" href="https://www.youtube.com/watch?v=i2qOS0It1q8" target="_blank" rel="noopener"><i class="bi bi-youtube"></i> YouTube</a>
+                                    <a class="pl-detail" href="https://open.spotify.com/search/La%20Indiferencia%20Silvestre" target="_blank" rel="noopener"><i class="bi bi-spotify"></i> Spotify</a>
+                                    <a class="pl-detail" href="https://music.apple.com/us/artist/silvestre-dangond/311205761?uo=2" target="_blank" rel="noopener"><i class="bi bi-apple"></i> Apple Music</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canción 5 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card escucha-card h-100">
+                            <a href="https://www.youtube.com/watch?v=FU-7mHUTJKk" target="_blank" rel="noopener" class="escucha-thumb">
+                                <img src="https://img.youtube.com/vi/FU-7mHUTJKk/mqdefault.jpg" alt="Miniatura del video La Suerte Está Echada en YouTube">
+                                <span class="play-btn"><i class="bi bi-play-fill"></i></span>
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">La Suerte Está Echada</h5>
+                                <p class="card-artista">Diomedes Díaz</p>
+                                <div class="escucha-links">
+                                    <a class="pl-detail" href="https://www.youtube.com/watch?v=FU-7mHUTJKk" target="_blank" rel="noopener"><i class="bi bi-youtube"></i> YouTube</a>
+                                    <a class="pl-detail" href="https://open.spotify.com/search/La%20Suerte%20Est%C3%A1%20Echada" target="_blank" rel="noopener"><i class="bi bi-spotify"></i> Spotify</a>
+                                    <a class="pl-detail" href="https://music.apple.com/us/artist/diomedes-d%C3%ADaz/73026993?uo=2" target="_blank" rel="noopener"><i class="bi bi-apple"></i> Apple Music</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canción 6 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card escucha-card h-100">
+                            <a href="https://www.youtube.com/watch?v=L8_5VqNkseY" target="_blank" rel="noopener" class="escucha-thumb">
+                                <img src="https://img.youtube.com/vi/L8_5VqNkseY/mqdefault.jpg" alt="Miniatura del video En Buenas Manos en YouTube">
+                                <span class="play-btn"><i class="bi bi-play-fill"></i></span>
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">En Buenas Manos</h5>
+                                <p class="card-artista">Diomedes Díaz</p>
+                                <div class="escucha-links">
+                                    <a class="pl-detail" href="https://www.youtube.com/watch?v=L8_5VqNkseY" target="_blank" rel="noopener"><i class="bi bi-youtube"></i> YouTube</a>
+                                    <a class="pl-detail" href="https://open.spotify.com/search/En%20Buenas%20Manos%20Diomedes" target="_blank" rel="noopener"><i class="bi bi-spotify"></i> Spotify</a>
+                                    <a class="pl-detail" href="https://music.apple.com/us/album/un-canto-celestial/316926004?uo=2" target="_blank" rel="noopener"><i class="bi bi-apple"></i> Apple Music</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FORMATOS ================= -->
+        <section id="formatos" class="py-5">
+            <div class="container">
+                <h2 class="titulo-seccion text-center mb-4">Elige tu formato favorito</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="format-card text-center h-100">
+                            <i class="bi bi-cd-fill format-ico"></i>
+                            <h3>CD</h3>
+                            <p>El clásico de los viajes. Perfecto para el carro o el computador. Incluye libreto con fotos y letras.</p>
+                            <ul class="format-list text-start">
+                                <li><i class="bi bi-check2"></i> Audio sin comprimir</li>
+                                <li><i class="bi bi-check2"></i> Libreto e inserts originales</li>
+                                <li><i class="bi bi-check2"></i> Empaque novedoso</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="format-card destacado text-center h-100">
+                            <i class="bi bi-vinyl-fill format-ico"></i>
+                            <h3>Vinilo 180g</h3>
+                            <p>El sonido cálido que enamora a los coleccionistas. Re-ediciones de alta fidelidad.</p>
+                            <ul class="format-list text-start">
+                                <li><i class="bi bi-check2"></i> Vinilo 180 gramos</li>
+                                <li><i class="bi bi-check2"></i> Funda con arte original</li>
+                                <li><i class="bi bi-check2"></i> Código de descarga digital</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="format-card text-center h-100">
+                            <i class="bi bi-cloud-arrow-down-fill format-ico"></i>
+                            <h3>Descarga digital</h3>
+                            <p>Recibe tu música al instante en MP3 320kbps, ideal para escucharla donde quieras.</p>
+                            <ul class="format-list text-start">
+                                <li><i class="bi bi-check2"></i> Entrega inmediata por email</li>
+                                <li><i class="bi bi-check2"></i> Acceso de por vida</li>
+                                <li><i class="bi bi-check2"></i> Compatible con tu celular</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TOP CLÁSICOS ================= -->
+        <section id="top" class="py-5 bg-seccion">
+            <div class="container">
+                <h2 class="titulo-seccion text-center mb-4">Los clásicos más pedidos</h2>
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-8">
-                        <div class="form-panel p-4 p-md-5 shadow-lg">
+                        <ol class="top-list">
+                            <li><span class="top-num"><i class="bi bi-trophy-fill"></i></span>
+                                <div><h5>La Plata</h5><p>Diomedes Díaz y Juancho Rois · Álbum «Título de Amor»</p></div>
+                                <span class="badge text-bg-warning top-badge">Vinilo</span>
+                            </li>
+                            <li><span class="top-num ver">2</span>
+                                <div><h5>El Santo Cachón</h5><p>Los Embajadores Vallenatos</p></div>
+                                <span class="badge text-bg-light top-badge">CD</span>
+                            </li>
+                            <li><span class="top-num ver">3</span>
+                                <div><h5>La Casa en el Aire</h5><p>Rafael Escalona · Son</p></div>
+                                <span class="badge text-bg-light top-badge">CD</span>
+                            </li>
+                            <li><span class="top-num ver">4</span>
+                                <div><h5>Oye Bonita</h5><p>Diomedes Díaz · Álbum «30 Grandes Éxitos»</p></div>
+                                <span class="badge text-bg-warning top-badge">Vinilo</span>
+                            </li>
+                            <li><span class="top-num ver">5</span>
+                                <div><h5>Los Caminos de la Vida</h5><p>Los Diablitos</p></div>
+                                <span class="badge text-bg-light top-badge">CD</span>
+                            </li>
+                            <li><span class="top-num ver">6</span>
+                                <div><h5>Sin Medir Distancias</h5><p>Diomedes Díaz</p></div>
+                                <span class="badge text-bg-light top-badge">CD</span>
+                            </li>
+                            <li><span class="top-num ver">7</span>
+                                <div><h5>El Cantor de Fonseca</h5><p>Carlos Vives & Egidio Cuadrado</p></div>
+                                <span class="badge text-bg-warning top-badge">Vinilo</span>
+                            </li>
+                            <li><span class="top-num ver">8</span>
+                                <div><h5>Río Guachinoco</h5><p>Hermanos Zuleta · Paseo</p></div>
+                                <span class="badge text-bg-light top-badge">CD</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FORMULARIO DE PEDIDO ================= -->
+        <section id="pedido" class="py-5">
+            <div class="container">
+                <h2 class="titulo-seccion text-center mb-3">Formulario de pedido</h2>
+                <p class="text-center text-muted mx-auto mb-4" style="max-width: 620px;">Completa tus datos y el producto que quieres. Te confirmamos la disponibilidad en menos de 24 horas.</p>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <div class="form-panel p-4 p-md-5 shadow-lg rounded-4">
                             <form id="formularioPedido" class="row g-3" novalidate>
 
-                                <!-- Campo de texto: nombre completo -->
                                 <div class="col-md-6">
                                     <label for="nombre" class="form-label">Nombre completo</label>
                                     <input type="text" class="form-control" id="nombre" name="nombre"
@@ -119,7 +515,6 @@
                                     <div class="invalid-feedback">Por favor ingresa tu nombre completo.</div>
                                 </div>
 
-                                <!-- Campo email con pattern -->
                                 <div class="col-md-6">
                                     <label for="email" class="form-label">Correo electrónico</label>
                                     <input type="email" class="form-control" id="email" name="email"
@@ -128,7 +523,6 @@
                                     <div class="invalid-feedback">Ingresa un correo válido, ej: nombre@correo.com.</div>
                                 </div>
 
-                                <!-- Campo teléfono con pattern -->
                                 <div class="col-md-6">
                                     <label for="telefono" class="form-label">Teléfono</label>
                                     <div class="input-group">
@@ -139,15 +533,13 @@
                                     <div class="invalid-feedback">Solo números, entre 7 y 12 dígitos.</div>
                                 </div>
 
-                                <!-- Campo número -->
                                 <div class="col-md-6">
-                                    <label for="cantidad" class="form-label">Cantidad de productos</label>
-                                    <input type="number" class="form-control" id="cantidad" name="cantidad"
-                                        min="1" max="20" value="1" required>
-                                    <div class="invalid-feedback">Cantidad entre 1 y 20.</div>
+                                    <label for="ciudad" class="form-label">Ciudad</label>
+                                    <input type="text" class="form-control" id="ciudad" name="ciudad"
+                                        placeholder="Ej: Valledupar" maxlength="40" required>
+                                    <div class="invalid-feedback">Indica la ciudad de entrega.</div>
                                 </div>
 
-                                <!-- Select: artista/agrupación -->
                                 <div class="col-md-6">
                                     <label for="artista" class="form-label">Artista / Agrupación</label>
                                     <select class="form-select" id="artista" name="artista" required>
@@ -156,98 +548,96 @@
                                             <option value="diomedes">Diomedes Díaz</option>
                                             <option value="jorge-celedon">Jorge Celedón</option>
                                             <option value="silvestre">Silvestre Dangond</option>
+                                            <option value="aniceto">Aniceto Molina</option>
                                         </optgroup>
                                         <optgroup label="Agrupaciones">
                                             <option value="binomio">Binomio de Oro de América</option>
                                             <option value="hermanos-zuleta">Hermanos Zuleta</option>
                                             <option value="los-diositos">Los Diablitos</option>
-                                            <option value="vallenato-king">Los Vallenato King</option>
+                                            <option value="embajadores">Los Embajadores Vallenatos</option>
                                         </optgroup>
                                     </select>
                                     <div class="invalid-feedback">Elige un artista o agrupación.</div>
                                 </div>
 
-                                <!-- Select: producto -->
                                 <div class="col-md-6">
                                     <label for="producto" class="form-label">Producto</label>
                                     <select class="form-select" id="producto" name="producto" required>
                                         <option value="" selected>Selecciona una opción…</option>
-                                        <option value="la-provincia-v">Vinilo – La Provincia (Diomedes Díaz)</option>
-                                        <option value="exitos-cd">CD – Los Mejores Éxitos (Binomio de Oro)</option>
-                                        <option value="cualquier-dia-v">Vinilo – Cualquier Día (J. Celedón)</option>
-                                        <option value="historia-cd">CD – Historia Musical (Hermanos Zuleta)</option>
+                                        <option value="binomio-cd">CD – 30 Mejores (Binomio de Oro) · $55.000</option>
+                                        <option value="diomedes-cd">CD – 30 Grandes Éxitos (Diomedes) · $48.000</option>
+                                        <option value="diomedes-vinilo">Vinilo – Experiencias Vividas (Diomedes) · $92.000</option>
+                                        <option value="canto-cd">CD – Un Canto Celestial (Diomedes) · $46.000</option>
+                                        <option value="amor-vinilo">Vinilo – Título de Amor (Diomedes) · $95.000</option>
+                                        <option value="celedon-cd">CD – Celedón Sin Fronteras (J. Celedón) · $50.000</option>
+                                        <option value="suenos-cd">CD – Llévame en Tus Sueños (J. Celedón) · $47.000</option>
+                                        <option value="antologia-vinilo">Vinilo – Los 30 Vallenatos de la Historia · $110.000</option>
                                     </select>
                                     <div class="invalid-feedback">Elige un producto.</div>
                                 </div>
 
-                                <!-- Botones de radio: formato -->
+                                <div class="col-md-6">
+                                    <label for="cantidad" class="form-label">Cantidad</label>
+                                    <input type="number" class="form-control" id="cantidad" name="cantidad"
+                                        min="1" max="20" value="1" required>
+                                    <div class="invalid-feedback">Cantidad entre 1 y 20.</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="fechaEntrega" class="form-label">Fecha estimada de entrega</label>
+                                    <input type="date" class="form-control" id="fechaEntrega" name="fechaEntrega" required>
+                                    <div class="invalid-feedback">Selecciona una fecha.</div>
+                                </div>
+
                                 <div class="col-12">
                                     <label class="form-label d-block">Formato preferido</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="formato"
-                                            id="formatoCd" value="cd" required>
+                                        <input class="form-check-input" type="radio" name="formato" id="formatoCd" value="cd" required>
                                         <label class="form-check-label" for="formatoCd">CD</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="formato"
-                                            id="formatoVinilo" value="vinilo">
+                                        <input class="form-check-input" type="radio" name="formato" id="formatoVinilo" value="vinilo">
                                         <label class="form-check-label" for="formatoVinilo">Vinilo</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="formato"
-                                            id="formatoDigital" value="digital">
+                                        <input class="form-check-input" type="radio" name="formato" id="formatoDigital" value="digital">
                                         <label class="form-check-label" for="formatoDigital">Descarga digital</label>
                                     </div>
                                     <div class="invalid-feedback">Selecciona un formato.</div>
                                 </div>
 
-                                <!-- Casillas de verificación: extras -->
                                 <div class="col-12">
                                     <label class="form-label d-block">Extras (opcional)</label>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="autografiado"
-                                            id="extrasAutografiado">
-                                        <label class="form-check-label" for="extrasAutografiado">
-                                            Álbum autografiado
-                                        </label>
+                                        <input class="form-check-input" type="checkbox" value="autografiado" id="extrasAutografiado">
+                                        <label class="form-check-label" for="extrasAutografiado">Álbum autografiado</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="envuelto"
-                                            id="extrasEnvoltura">
-                                        <label class="form-check-label" for="extrasEnvoltura">
-                                            Envoltura de regalo
-                                        </label>
+                                        <input class="form-check-input" type="checkbox" value="envuelto" id="extrasEnvoltura">
+                                        <label class="form-check-label" for="extrasEnvoltura">Envoltura de regalo</label>
                                     </div>
                                     <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="extrasNoticias">
-                                        <label class="form-check-label" for="extrasNoticias">
-                                            Recibir novedades por correo
-                                        </label>
+                                        <input class="form-check-input" type="checkbox" role="switch" id="extrasNoticias">
+                                        <label class="form-check-label" for="extrasNoticias">Recibir novedades por correo</label>
                                     </div>
                                 </div>
 
-                                <!-- Casillas de verificación: método de pago (radio-like pero checkbox) -->
                                 <div class="col-12">
                                     <label class="form-label d-block">Método de pago</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="pago"
-                                            id="pagoTarjeta" value="tarjeta">
+                                        <input class="form-check-input" type="checkbox" name="pago" id="pagoTarjeta" value="tarjeta">
                                         <label class="form-check-label" for="pagoTarjeta">Tarjeta</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="pago"
-                                            id="pagoContraentrega" value="contraentrega">
+                                        <input class="form-check-input" type="checkbox" name="pago" id="pagoContraentrega" value="contraentrega">
                                         <label class="form-check-label" for="pagoContraentrega">Contra entrega</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="pago"
-                                            id="pagoNequi" value="nequi">
-                                        <label class="form-check-label" for="pagoNequi">Nequi</label>
+                                        <input class="form-check-input" type="checkbox" name="pago" id="pagoNequi" value="nequi">
+                                        <label class="form-check-label" for="pagoNequi">Nequi / Daviplata</label>
                                     </div>
                                 </div>
 
-                                <!-- Textarea: comentarios -->
                                 <div class="col-12">
                                     <label for="comentarios" class="form-label">Comentarios adicionales</label>
                                     <textarea class="form-control" id="comentarios" name="comentarios" rows="4"
@@ -256,22 +646,17 @@
 
                                 <div class="col-12">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="terminos"
-                                            id="aceptaTerminos" required>
-                                        <label class="form-check-label" for="aceptaTerminos">
-                                            Acepto los términos y condiciones del envío
-                                        </label>
+                                        <input class="form-check-input" type="checkbox" value="terminos" id="aceptaTerminos" required>
+                                        <label class="form-check-label" for="aceptaTerminos">Acepto los términos y condiciones del envío</label>
                                         <div class="invalid-feedback">Debes aceptar los términos para continuar.</div>
                                     </div>
                                 </div>
 
                                 <div class="col-12 d-grid d-md-block">
-                                    <button type="submit" class="btn btn-hero btn-lg px-5">
+                                    <button type="submit" class="btn btn-hero btn-lg px-4">
                                         <i class="bi bi-cart-check me-1"></i> Enviar pedido
                                     </button>
-                                    <button type="reset" class="btn btn-outline-secondary btn-lg px-4 mt-2 mt-md-0">
-                                        Limpiar
-                                    </button>
+                                    <button type="reset" class="btn btn-outline-secondary btn-lg px-4 mt-2 mt-md-0">Limpiar</button>
                                 </div>
                             </form>
                         </div>
@@ -279,45 +664,201 @@
                 </div>
             </div>
         </section>
+
+        <!-- ================= TESTIMONIOS ================= -->
+        <section id="testimonios" class="py-5 bg-seccion">
+            <div class="container">
+                <h2 class="titulo-seccion text-center mb-4">Lo que dicen nuestros clientes</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card testimonio h-100">
+                            <div class="card-body">
+                                <div class="estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                <blockquote class="mb-3">“Pedí el vinilo de Experiencias Vividas y llegó impecable, con su sellado original. El sonido es una joya.”</blockquote>
+                                <div class="d-flex align-items-center">
+                                    <span class="avatar">MC</span>
+                                    <div><strong>María Corrales</strong><p class="mb-0 small text-muted">Bogotá · Cliente desde 2019</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card testimonio h-100">
+                            <div class="card-body">
+                                <div class="estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                <blockquote class="mb-3">“Excelente catálogo y atención. Conseguí el disco que buscaba hace años de la agrupación Los Diablitos.”</blockquote>
+                                <div class="d-flex align-items-center">
+                                    <span class="avatar av-2">JA</span>
+                                    <div><strong>Jorge Armenta</strong><p class="mb-0 small text-muted">Valledupar · Coleccionista</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card testimonio h-100">
+                            <div class="card-body">
+                                <div class="estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <blockquote class="mb-3">“La descarga digital llegó al instante y con buena calidad. Además el formulario es muy fácil de diligenciar.”</blockquote>
+                                <div class="d-flex align-items-center">
+                                    <span class="avatar av-3">LP</span>
+                                    <div><strong>Laura Pianeta</strong><p class="mb-0 small text-muted">Barranquilla · Cliente desde 2023</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PREGUNTAS FRECUENTES ================= -->
+        <section id="faq" class="py-5">
+            <div class="container">
+                <h2 class="titulo-seccion text-center mb-4">Preguntas frecuentes</h2>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <div class="accordion" id="acordeonFaq">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                        ¿Cuánto tarda el envío?
+                                    </button>
+                                </h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#acordeonFaq">
+                                    <div class="accordion-body">Ciudades principales (Bogotá, Medellín, Cali, Barranquilla y Costa Caribe): de 2 a 4 días hábiles. Resto del país: de 4 a 7 días hábiles. Las descargas digitales llegan al instante.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                        ¿Qué métodos de pago aceptan?
+                                    </button>
+                                </h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                                    <div class="accordion-body">Tarjeta de crédito o débito, Nequi, Daviplata y pago contra entrega (disponible en la mayoría de municipios del Cesar y La Guajira).</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                        ¿Los vinilos son originales?
+                                    </button>
+                                </h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                                    <div class="accordion-body">Sí. Trabajamos con distribuidores autorizados de Sony Music, Codiscos, Discos Fuentes y otras disqueras colombianas. Cada pieza incluye su sellado y código de verificación.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                        ¿Hacen envíos internacionales?
+                                    </button>
+                                </h3>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                                    <div class="accordion-body">Sí, enviamos a Estados Unidos, España, México y Panamá con un costo adicional estimado en el formulario al confirmar tu pedido. El tiempo promedio es de 15 a 25 días.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                        ¿Puedo devolver un producto?
+                                    </button>
+                                </h3>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                                    <div class="accordion-body">Sí. Si el producto llega dañado o no es lo que pediste, tienes 15 días para solicitar cambio o devolución. Los discos abiertos no son reembolsables, tal como indica la ley colombiana para este tipo de bienes.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BOLETÍN ================= -->
+        <section id="boletin" class="boletin py-5 text-white">
+            <div class="container text-center">
+                <h2 class="mb-3">Únete a nuestro boletín</h2>
+                <p class="mx-auto mb-4" style="max-width: 560px;">Recibe lanzamientos, reediciones y ofertas especiales del vallenato directamente en tu correo. Sin spam, solo buena música.</p>
+                <form id="formBoletin" class="row g-2 justify-content-center mx-auto" style="max-width: 520px;" novalidate>
+                    <div class="col-12 col-sm-8">
+                        <label for="correoBoletin" class="visually-hidden">Tu correo electrónico</label>
+                        <input type="email" class="form-control form-control-lg" id="correoBoletin" name="correoBoletin"
+                            placeholder="tucorreo@ejemplo.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <div class="invalid-feedback">Ingresa un correo válido.</div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <button type="submit" class="btn btn-hero btn-lg w-100">Suscribirme</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ================= CONTACTO ================= -->
+        <section id="contacto" class="contacto py-5 text-white">
+            <div class="container">
+                <div class="row gy-4 text-center text-md-start">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <h5 class="contacto-titulo"><i class="bi bi-geo-alt me-2"></i>Nuestra tienda</h5>
+                        <p class="mb-1">Cra 9 # 16-40, Centro</p>
+                        <p class="mb-0">Valledupar, Cesar – Colombia</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <h5 class="contacto-titulo"><i class="bi bi-envelope me-2"></i>Correo</h5>
+                        <p class="mb-0">servicio@vallenatostore.com</p>
+                        <p class="mb-0 small">respuesta en menos de 24h</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <h5 class="contacto-titulo"><i class="bi bi-telephone me-2"></i>Teléfonos</h5>
+                        <p class="mb-0">+57 300 123 45 67</p>
+                        <p class="mb-0 small">Lun–Sáb · 8:00 a. m. – 6:00 p. m.</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <h5 class="contacto-titulo">Síguenos</h5>
+                        <div class="d-flex justify-content-center justify-content-md-start gap-2">
+                            <a href="#" class="red-social" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="red-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="red-social" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                            <a href="#" class="red-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- ======= CONTACTO ======= -->
-    <section id="contacto" class="contacto py-5 text-white">
-        <div class="container text-center">
-            <h2 class="mb-3">Contacto</h2>
-            <p class="mb-1"><i class="bi bi-geo-alt me-2"></i>Valledupar, Cesar – Colombia</p>
-            <p class="mb-1"><i class="bi bi-envelope me-2"></i>ventas@vallenatostore.com</p>
-            <p class="mb-0"><i class="bi bi-whatsapp me-2"></i>+57 300 123 45 67</p>
-        </div>
-    </section>
-
-    <!-- ======= PIE DE PÁGINA / FOOTER ======= -->
+    <!-- ================= PIE DE PÁGINA / FOOTER ================= -->
     <footer class="footer py-4 text-center text-white">
         <div class="container">
-            <p class="mb-1">&copy; 2026 VallenatoStore. Todos los derechos reservados.</p>
-            <p class="mb-0 small">Hecho con <i class="bi bi-heart-fill"></i> en La tierra del vallenato</p>
+            <p class="mb-2">
+                <span class="brand-logo me-1">VallenatoStore</span>
+                &copy; 2011–2026 · Todos los derechos reservados.
+            </p>
+            <p class="mb-0 small">Hecho con <i class="bi bi-heart-fill mx-1"></i> en La tierra del vallenato ·
+                <a href="#inicio" class="footer-link">Volver arriba <i class="bi bi-arrow-up"></i></a>
+            </p>
         </div>
     </footer>
 
     <!-- Bootstrap 5.3 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Validación visual con clases de Bootstrap -->
+    <!-- Validación visual de formularios con Bootstrap -->
     <script>
-        // Activa la validación visual de Bootstrap (.was-validated) al enviar
-        const form = document.getElementById('formularioPedido');
-        form.addEventListener('submit', function (evento) {
-            if (!form.checkValidity()) {
-                evento.preventDefault();
-                evento.stopPropagation();
-            } else {
-                evento.preventDefault();
-                alert('¡Gracias! Pedido recibido. Te contactaremos pronto. 🎵');
-                form.reset();
-                form.classList.remove('was-validated');
-            }
-            form.classList.add('was-validated');
-        });
+        function validarFormulario(form, mensaje) {
+            form.addEventListener('submit', function (evento) {
+                if (!form.checkValidity()) {
+                    evento.preventDefault();
+                    evento.stopPropagation();
+                } else {
+                    evento.preventDefault();
+                    alert(mensaje);
+                    form.reset();
+                    form.classList.remove('was-validated');
+                }
+                form.classList.add('was-validated');
+            });
+        }
+        validarFormulario(document.getElementById('formularioPedido'), '¡Gracias! Pedido recibido. Te contactaremos pronto. 🎵');
+        validarFormulario(document.getElementById('formBoletin'), '¡Listo! Ya estás en nuestra lista. Revisa tu correo. 🎶');
     </script>
 </body>
 </html>
