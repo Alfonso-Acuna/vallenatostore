@@ -1009,6 +1009,174 @@ a {
     transform: translateY(-3px);
 }
 
+/* ---------- Directorio de artistas ---------- */
+.buscador-artista .input-group-text {
+    background: #fff;
+    border: 1px solid #d8ceba;
+    border-right: none;
+    border-radius: 12px 0 0 12px;
+    color: var(--rojo-primario);
+}
+
+.buscador-artista .form-control {
+    border-left: none;
+    border-radius: 0 12px 12px 0;
+}
+
+.buscador-artista:focus-within .input-group-text {
+    border-color: var(--dorado);
+    box-shadow: 0 0 0 0.25rem rgba(196, 150, 44, 0.22);
+}
+
+.texto-resaltado {
+    color: var(--rojo-primario);
+}
+
+.artista-ficha {
+    border: none;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    padding: 1.25rem;
+}
+
+.artista-ficha:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 38px rgba(0, 0, 0, 0.15);
+}
+
+.ficha-cabecera {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+}
+
+.ficha-num {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--dorado), var(--rojo-primario));
+    box-shadow: 0 6px 14px rgba(156, 43, 30, 0.28);
+}
+
+.ficha-titulo h4 {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+    color: var(--marron);
+}
+
+.ficha-alias {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--texto-suave);
+}
+
+.ficha-tipo {
+    margin-left: auto;
+    font-size: 0.66rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    background: var(--fondo-alt);
+    color: var(--rojo-primario);
+    padding: 0.32rem 0.65rem;
+    border-radius: 2rem;
+}
+
+.ficha-desc {
+    font-size: 0.92rem;
+    color: var(--texto-suave);
+    margin: 0.9rem 0 0.6rem;
+}
+
+.disco {
+    margin-bottom: 0.9rem;
+}
+
+.disco summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--rojo-primario);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: color 0.2s ease;
+}
+
+.disco summary:hover {
+    color: var(--rojo-oscuro);
+}
+
+.disco summary::-webkit-details-marker {
+    display: none;
+}
+
+.disco summary .bi-chevron-down {
+    color: var(--dorado);
+    transition: transform 0.25s ease;
+}
+
+.disco[open] summary .bi-chevron-down {
+    transform: rotate(180deg);
+}
+
+.disco ul {
+    margin: 0.6rem 0 0;
+    padding: 0.75rem 1rem 0.75rem 1.45rem;
+    background: var(--fondo-alt);
+    border-radius: 12px;
+    animation: abrirDisco 0.28s ease;
+}
+
+@keyframes abrirDisco {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: none; }
+}
+
+.disco li {
+    font-size: 0.85rem;
+    color: var(--marron);
+    margin-bottom: 0.35rem;
+}
+
+.disco li:last-child {
+    margin-bottom: 0;
+}
+
+.disco li::marker {
+    color: var(--dorado);
+}
+
+.ficha-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border-top: 1px dashed #e7ddc9;
+    padding-top: 0.9rem;
+}
+
+.artista-ficha .pl-detail {
+    font-size: 0.82rem;
+}
+
+.ficha-entrante {
+    animation: revelar 0.4s ease;
+}
+
 /* ---------- AOS ajustes ---------- */
 [data-aos] {
     will-change: transform, opacity;
