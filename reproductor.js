@@ -36,6 +36,46 @@
             tema: 'En Buenas Manos',
             artista: 'Diomedes Díaz',
             url: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0d/63/18/0d63183d-5de7-1c01-439c-394dab165a34/mzaf_1189226187526308658.plus.aac.p.m4a'
+        },
+        'Vivo en el Limbo': {
+            tema: 'Vivo en el Limbo',
+            artista: 'Kaleth Morales & Andrés Herrera',
+            url: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/08/54/3f0854fb-1d10-2c61-da93-ae31c26c5ede/mzaf_3882192781925306871.plus.aac.p.m4a'
+        },
+        'Niña Bonita': {
+            tema: 'Niña Bonita (En Vivo)',
+            artista: 'Binomio de Oro de América',
+            url: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/19/fb/a8/19fba803-d2d4-60af-377c-ecfff1a7b842/mzaf_17244786120963546552.plus.aac.p.m4a'
+        },
+        'El Cantor de Fonseca': {
+            tema: 'El Cantor de Fonseca',
+            artista: 'Carlos Vives',
+            url: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/31/28/b4/3128b445-126b-1468-3f9e-1212ecdbc381/mzaf_8867407022022092088.plus.aac.p.m4a'
+        },
+        'Loco Paranoico': {
+            tema: 'Loco Paranoico',
+            artista: 'Silvestre Dangond & Rolando Ochoa',
+            url: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e0/40/d7/e040d747-2cec-e117-0a38-f15ca349478e/mzaf_2671974465389465345.plus.aac.p.m4a'
+        },
+        'El Amor Más Grande del Planeta': {
+            tema: 'El Amor Más Grande del Planeta',
+            artista: 'Felipe Peláez & Zabaleta',
+            url: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/33/99/0d/33990d32-d107-34b7-af8d-942a197536d7/mzaf_14447997026745451971.plus.aac.p.m4a'
+        },
+        'Casualidad': {
+            tema: 'Casualidad',
+            artista: 'Nelson Velásquez',
+            url: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b1/1c/b7/b11cb7df-5949-1c42-ae9f-dc908f49a65b/mzaf_11872733959838952452.plus.aac.p.m4a'
+        },
+        'Los Caminos de la Vida': {
+            tema: 'Los Caminos de la Vida',
+            artista: 'Los Diablitos',
+            url: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/a6/9e/03a69eae-9906-b7ee-5d26-4a0ccbaeb744/mzaf_4831620038838676612.plus.aac.p.m4a'
+        },
+        'Mañanita de Invierno': {
+            tema: 'Mañanita de Invierno',
+            artista: 'Poncho Zuleta',
+            url: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d4/9e/54/d49e5468-1594-1418-48b6-69317c7bbc8d/mzaf_5616346879516115220.plus.aac.p.m4a'
         }
     };
 
