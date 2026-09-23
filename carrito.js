@@ -232,7 +232,11 @@
             cerrar();
             if (carrito.length === 0) { return; }
             sincronizarFormSimple();
-            document.getElementById('pedido').scrollIntoView({ behavior: 'smooth' });
+            if (window.VSVista) {
+                window.VSVista('pedido');
+            } else {
+                document.getElementById('pedido').scrollIntoView({ behavior: 'smooth' });
+            }
         });
 
         /* Gancho para que la validación del formulario vacíe el carrito */

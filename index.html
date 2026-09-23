@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-spy="scroll" data-bs-target="#menuPrincipal" data-bs-root-margin="0px 0px -35%" data-bs-smooth-scroll="true">
+<html lang="es">
 <head>
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="VallenatoStore: tienda virtual de álbumes, vinilos y CDs de música vallenata. Escucha en YouTube, Spotify y Apple Music.">
@@ -25,7 +28,7 @@
     <header class="header-vallenato fixed-top shadow-sm">
         <nav id="menuPrincipal" class="navbar navbar-expand-lg navbar-dark py-3">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="#inicio">
+                <a class="navbar-brand d-flex align-items-center nav-view" href="#inicio" data-vista="inicio">
                     <span class="brand-marca d-inline-flex align-items-center justify-content-center me-2"><i class="bi bi-disc-fill rotar"></i></span>
                     <span class="brand-logo">VallenatoStore</span>
                 </a>
@@ -35,16 +38,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="menuContenido">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-1">
-                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#artistas">Artistas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#directorio">Artistas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#escuchar">Escuchar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#pedido">Pedido</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link nav-view active" href="#inicio" data-vista="inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link nav-view" href="#historia" data-vista="historia">Historia</a></li>
+                        <li class="nav-item"><a class="nav-link nav-view" href="#artistas" data-vista="artistas">Artistas</a></li>
+                        <li class="nav-item"><a class="nav-link nav-view" href="#catalogo" data-vista="catalogo">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link nav-view" href="#escuchar" data-vista="escuchar">Escuchar</a></li>
+                        <li class="nav-item"><a class="nav-link nav-view" href="#pedido" data-vista="pedido">Pedido</a></li>
+                        <li class="nav-item"><a class="nav-link nav-view" href="#contacto" data-vista="contacto">Contacto</a></li>
                         <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                            <a class="btn btn-dorado btn-sm px-3" href="#pedido"><i class="bi bi-cart-plus me-1"></i>Pedir ahora</a>
+                            <a class="btn btn-dorado btn-sm px-3 nav-view" href="#pedido" data-vista="pedido"><i class="bi bi-cart-plus me-1"></i>Pedir ahora</a>
                         </li>
                     </ul>
                 </div>
@@ -53,7 +55,7 @@
     </header>
 
     <!-- ================= HERO ================= -->
-    <section id="inicio" class="hero d-flex align-items-center text-center text-white">
+    <section data-vista="inicio" id="inicio" class="hero d-flex align-items-center text-center text-white">
         <span class="hero-nota d-none d-lg-block" style="top:18%;left:6%"><i class="bi bi-music-note-beamed"></i></span>
         <span class="hero-nota d-none d-lg-block" style="top:60%;left:12%"><i class="bi bi-vinyl-fill"></i></span>
         <span class="hero-nota d-none d-lg-block" style="top:26%;right:8%"><i class="bi bi-music-note-list"></i></span>
@@ -64,8 +66,8 @@
                 <h1 class="display-3 fw-bold mb-3 animar-inicio" data-espera="1">La música que <span class="texto-dorado">vibra</span> con el acordeón</h1>
                 <p class="lead mx-auto hero-sub mb-4 animar-inicio" data-espera="2">Vinilos, CDs y descargas digitales de los artistas y agrupaciones más grandes del vallenato. Diomedes Díaz, Jorge Celedón, Binomio de Oro y muchos más.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3 mb-4 animar-inicio" data-espera="3">
-                    <a href="#catalogo" class="btn btn-dorado btn-lg px-4"><i class="bi bi-collection me-1"></i>Ver catálogo</a>
-                    <a href="#escuchar" class="btn btn-borde btn-lg px-4"><i class="bi bi-play-circle me-1"></i>Escuchar muestra</a>
+                    <a href="#catalogo" class="btn btn-dorado btn-lg px-4 nav-view" data-vista="catalogo"><i class="bi bi-collection me-1"></i>Ver catálogo</a>
+                    <a href="#escuchar" class="btn btn-borde btn-lg px-4 nav-view" data-vista="escuchar"><i class="bi bi-play-circle me-1"></i>Escuchar muestra</a>
                 </div>
                 <div class="d-flex flex-wrap justify-content-center gap-2 mb-4 animar-inicio" data-espera="4">
                     <span class="hero-chip"><i class="bi bi-truck me-1"></i>Envío a todo Colombia</span>
@@ -92,7 +94,7 @@
     </section>
 
     <!-- ================= CINTA SCROLLING ================= -->
-    <div class="cinta" aria-hidden="true">
+    <div class="cinta" aria-hidden="true" data-vista="inicio">
         <div class="cinta-contenido">
             <span>Diomedes Díaz</span><span class="cinta-sep">◆</span>
             <span>Jorge Celedón</span><span class="cinta-sep">◆</span>
@@ -105,21 +107,8 @@
         </div>
     </div>
 
-    <!-- ================= ATAJOS DE SECCIONES ================= -->
-    <nav class="quickbar" aria-label="Atajos de navegación">
-        <div class="container d-flex flex-wrap justify-content-center gap-2">
-            <a href="#historia"><i class="bi bi-book"></i> Historia</a>
-            <a href="#artistas"><i class="bi bi-person-badge"></i> Artistas</a>
-            <a href="#catalogo"><i class="bi bi-collection"></i> Catálogo</a>
-            <a href="#escuchar"><i class="bi bi-play-circle"></i> Escuchar</a>
-            <a href="#formatos"><i class="bi bi-vinyl"></i> Formatos</a>
-            <a href="#top"><i class="bi bi-trophy"></i> Ranking</a>
-            <a href="#pedido"><i class="bi bi-cart3"></i> Pedido</a>
-        </div>
-    </nav>
-
     <!-- ================= HISTORIA ================= -->
-    <section id="historia" class="seccion">
+    <section id="historia" class="seccion" data-vista="historia">
         <div class="container">
             <header class="seccion-cabecera" data-aos="fade-up">
                 <p class="seccion-eyebrow">Nuestra pasión</p>
@@ -150,7 +139,7 @@
     </section>
 
     <!-- ================= ARTISTAS ================= -->
-    <section id="artistas" class="seccion seccion-alt">
+    <section data-vista="artistas" id="artistas" class="seccion seccion-alt">
         <div class="container">
             <header class="seccion-cabecera" data-aos="fade-up">
                 <p class="seccion-eyebrow">Iconos del género</p>
@@ -295,7 +284,7 @@
     </section>
 
     <!-- ================= CATÁLOGO ================= -->
-    <section id="catalogo" class="seccion">
+    <section data-vista="catalogo" id="catalogo" class="seccion">
         <div class="container">
             <header class="seccion-cabecera" data-aos="fade-up">
                 <p class="seccion-eyebrow">Colección 2026</p>
@@ -527,7 +516,7 @@
 </section>
 
         <!-- ================= DIRECTORIO DE ARTISTAS ================= -->
-        <section id="directorio" class="seccion seccion-alt">
+        <section data-vista="artistas" id="directorio" class="seccion seccion-alt">
             <div class="container">
                 <header class="seccion-cabecera" data-aos="fade-up">
                     <p class="seccion-eyebrow">Directorio completo</p>
@@ -561,7 +550,7 @@
         </section>
 
         <!-- ================= ESCUCHAR EN PLATAFORMAS ================= -->
-    <section id="escuchar" class="seccion seccion-alt">
+    <section data-vista="escuchar" id="escuchar" class="seccion seccion-alt">
         <div class="container">
             <header class="seccion-cabecera" data-aos="fade-up">
                 <p class="seccion-eyebrow">Prueba antes de comprar</p>
@@ -826,7 +815,7 @@
     </section>
 
     <!-- ================= FORMATOS ================= -->
-    <section id="formatos" class="seccion">
+    <section data-vista="catalogo" id="formatos" class="seccion">
         <div class="container">
             <header class="seccion-cabecera" data-aos="fade-up">
                 <p class="seccion-eyebrow">Para cada coleccionista</p>
@@ -876,7 +865,7 @@
     </section>
 
     <!-- ================= TOP CLÁSICOS ================= -->
-    <section id="top" class="seccion seccion-top-bg">
+    <section data-vista="escuchar" id="top" class="seccion seccion-top-bg">
         <div class="container">
             <header class="seccion-cabecera" data-aos="fade-up">
                 <p class="seccion-eyebrow text-dorado">Ranking de la casa</p>
@@ -933,7 +922,7 @@
     </section>
 
     <!-- ================= FORMULARIO DE PEDIDO ================= -->
-    <section id="pedido" class="seccion">
+    <section data-vista="pedido" id="pedido" class="seccion">
         <div class="container">
             <header class="seccion-cabecera" data-aos="fade-up">
                 <p class="seccion-eyebrow">Checkout seguro</p>
@@ -1139,7 +1128,7 @@
     </section>
 
     <!-- ================= TESTIMONIOS ================= -->
-    <section id="testimonios" class="seccion seccion-alt">
+    <section data-vista="pedido" id="testimonios" class="seccion seccion-alt">
         <div class="container">
             <header class="seccion-cabecera" data-aos="fade-up">
                 <p class="seccion-eyebrow">Confianza garantizada</p>
@@ -1188,7 +1177,7 @@
     </section>
 
     <!-- ================= PREGUNTAS FRECUENTES ================= -->
-    <section id="faq" class="seccion">
+    <section data-vista="pedido" id="faq" class="seccion">
         <div class="container">
             <header class="seccion-cabecera" data-aos="fade-up">
                 <p class="seccion-eyebrow">Resolvemos tus dudas</p>
@@ -1255,7 +1244,7 @@
     </section>
 
     <!-- ================= BOLETÍN ================= -->
-    <section id="boletin" class="boletin py-5 text-white">
+    <section data-vista="contacto" id="boletin" class="boletin py-5 text-white">
         <div class="container text-center">
             <h2 class="mb-3 animar-inicio" data-espera="0">Únete a nuestro boletín</h2>
             <p class="mx-auto mb-4" style="max-width: 560px;">Recibe lanzamientos, reediciones y ofertas especiales del vallenato directamente en tu correo. Sin spam, solo buena música.</p>
@@ -1274,7 +1263,7 @@
     </section>
 
     <!-- ================= CONTACTO ================= -->
-    <section id="contacto" class="contacto py-5 text-white">
+    <section data-vista="contacto" id="contacto" class="contacto py-5 text-white">
         <div class="container">
             <div class="row gy-4 text-center text-md-start">
                 <div class="col-12 col-md-6 col-lg-3">
@@ -1310,7 +1299,7 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-12 col-lg-4">
-                    <a class="navbar-brand d-flex align-items-center mb-2" href="#inicio">
+                    <a class="navbar-brand d-flex align-items-center mb-2 nav-view" href="#inicio" data-vista="inicio">
                         <span class="brand-marca d-inline-flex align-items-center justify-content-center me-2"><i class="bi bi-disc-fill rotar"></i></span>
                         <span class="brand-logo">VallenatoStore</span>
                     </a>
@@ -1325,21 +1314,21 @@
                 <div class="col-6 col-lg-2 offset-lg-1">
                     <h6 class="footer-titulo">Enlaces</h6>
                     <ul class="footer-lista">
-                        <li><a href="#historia"><i class="bi bi-chevron-right"></i> Historia</a></li>
-                        <li><a href="#artistas"><i class="bi bi-chevron-right"></i> Artistas</a></li>
-                        <li><a href="#catalogo"><i class="bi bi-chevron-right"></i> Catálogo</a></li>
-                        <li><a href="#directorio"><i class="bi bi-chevron-right"></i> Directorio</a></li>
-                        <li><a href="#pedido"><i class="bi bi-chevron-right"></i> Hacer pedido</a></li>
-                        <li><a href="#faq"><i class="bi bi-chevron-right"></i> Preguntas</a></li>
+                        <li><a class="nav-view" href="#historia" data-vista="historia"><i class="bi bi-chevron-right"></i> Historia</a></li>
+                        <li><a class="nav-view" href="#artistas" data-vista="artistas"><i class="bi bi-chevron-right"></i> Artistas</a></li>
+                        <li><a class="nav-view" href="#catalogo" data-vista="catalogo"><i class="bi bi-chevron-right"></i> Catálogo</a></li>
+                        <li><a class="nav-view" href="#artistas" data-vista="artistas"><i class="bi bi-chevron-right"></i> Directorio</a></li>
+                        <li><a class="nav-view" href="#pedido" data-vista="pedido"><i class="bi bi-chevron-right"></i> Hacer pedido</a></li>
+                        <li><a class="nav-view" href="#pedido" data-vista="pedido"><i class="bi bi-chevron-right"></i> Preguntas</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2">
                     <h6 class="footer-titulo">Categorías</h6>
                     <ul class="footer-lista">
-                        <li><a href="#catalogo"><i class="bi bi-chevron-right"></i> CDs de vallenato</a></li>
-                        <li><a href="#catalogo"><i class="bi bi-chevron-right"></i> Vinilos 180g</a></li>
-                        <li><a href="#formatos"><i class="bi bi-chevron-right"></i> Descargas</a></li>
-                        <li><a href="#catalogo"><i class="bi bi-chevron-right"></i> Antologías</a></li>
+                        <li><a class="nav-view" href="#catalogo" data-vista="catalogo"><i class="bi bi-chevron-right"></i> CDs de vallenato</a></li>
+                        <li><a class="nav-view" href="#catalogo" data-vista="catalogo"><i class="bi bi-chevron-right"></i> Vinilos 180g</a></li>
+                        <li><a class="nav-view" href="#catalogo" data-vista="catalogo"><i class="bi bi-chevron-right"></i> Descargas</a></li>
+                        <li><a class="nav-view" href="#catalogo" data-vista="catalogo"><i class="bi bi-chevron-right"></i> Antologías</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-3">
@@ -1394,6 +1383,42 @@
 
             var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+            /* ---------- Sistema de vistas dinámicas (una sola sección visible) ---------- */
+            var vistaActual = 'inicio';
+            var elementosVista = document.querySelectorAll('[data-vista]');
+            var enlacesVista = document.querySelectorAll('.nav-view');
+            var aosListo = false;
+
+            function mostrarVista(nombre, instantaneo) {
+                nombre = nombre || 'inicio';
+                elementosVista.forEach(function (el) {
+                    el.classList.toggle('vista-activa', el.dataset.vista === nombre);
+                });
+                enlacesVista.forEach(function (enlace) {
+                    var activo = enlace.getAttribute('data-vista') === nombre;
+                    enlace.classList.toggle('active', activo);
+                    if (activo) { enlace.setAttribute('aria-current', 'page'); }
+                    else { enlace.removeAttribute('aria-current'); }
+                });
+                vistaActual = nombre;
+                if (aosListo && window.AOS && typeof AOS.refresh === 'function') { AOS.refresh(); }
+                window.scrollTo({ top: 0, behavior: (instantaneo || reduceMotion) ? 'auto' : 'smooth' });
+            }
+            window.VSVista = mostrarVista;
+
+            enlacesVista.forEach(function (enlace) {
+                enlace.addEventListener('click', function (evento) {
+                    var destino = enlace.getAttribute('data-vista');
+                    if (!destino) { return; }
+                    evento.preventDefault();
+                    mostrarVista(destino);
+                    var colapso = bootstrap.Collapse.getInstance(document.getElementById('menuContenido'));
+                    if (colapso) { colapso.hide(); }
+                });
+            });
+
+            mostrarVista(vistaActual, true);
+
             /* ---------- Animaciones iniciales del hero (secuenciales) ---------- */
             if (!reduceMotion) {
                 var heroElementos = document.querySelectorAll('.animar-inicio');
@@ -1418,6 +1443,7 @@
                 once: true,
                 disable: reduceMotion
             });
+            aosListo = true;
 
             /* ---------- Contadores animados ---------- */
             function animarContador(el) {

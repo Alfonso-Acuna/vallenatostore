@@ -1599,38 +1599,6 @@ body {
     font-size: 0.55rem;
 }
 
-/* ---------- Barra de atajos (navegación por secciones) ---------- */
-.quickbar {
-    background: linear-gradient(90deg, var(--rojo-oscuro), var(--rojo-primario) 55%, #7a3b10 130%);
-    padding: 0.85rem 0;
-    box-shadow: 0 10px 24px rgba(58, 21, 16, 0.35);
-}
-
-.quickbar a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    color: rgba(255, 255, 255, 0.92);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.88rem;
-    padding: 0.45rem 1rem;
-    border-radius: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
-}
-
-.quickbar a:hover {
-    background: rgba(196, 150, 44, 0.28);
-    border-color: var(--dorado-claro);
-    color: #fff;
-    transform: translateY(-2px);
-}
-
-.quickbar a i {
-    color: var(--dorado-claro);
-}
-
 /* ---------- Miniaturas de artistas destacados (cuadro, sin recortes raros) ---------- */
 .artista-foto {
     width: 112px;
@@ -2213,4 +2181,55 @@ body {
 .resumen-pago i {
     font-size: 1.1rem;
     color: var(--verde);
+}
+
+/* ================= REDISEÑO 2026: VISTAS DINÁMICAS =================
+   Cada sección con [data-vista] es una "página" independiente.
+   Solo se muestra la vista activa; el resto queda oculta.
+   Las reglas se activan con html.js (JS operativo); sin JS el sitio
+   se comporta como landing page con anclas.
+   (el !important evita que utilidades como .d-flex anulen la ocultación,
+    y deja que la vista activa recupere su display natural, p. ej. flex) */
+html.js [data-vista] {
+    display: none !important;
+}
+
+html.js [data-vista].vista-activa {
+    display: block;
+    animation: vista-aparecer 0.45s ease both;
+}
+
+/* El hero usa flexbox para centrar su contenido: al volverse activo
+   recupera display:flex, no block. */
+html.js [data-vista].vista-activa.d-flex,
+html.js [data-vista].vista-activa.hero {
+    display: flex !important;
+}
+
+@keyframes vista-aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navegación por vistas: el enlace de la vista activa queda resaltado */
+.nav-view {
+    cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-vista],
+    .nav-view {
+        transition: none;
+    }
+}
+
+/* Ajuste para que el pie de página siempre permanezca visible */
+html.js body.vista-visible header {
+    transition: background-color 0.3s;
 }
